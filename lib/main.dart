@@ -37,7 +37,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void captureImage(ImageSource captureMode) async {
     try {
-      var imageFile = await _imagePicker.pickImage(captureMode: captureMode);
+     // var imageFile = await _imagePicker.pickImage(captureMode: captureMode);(error in this line as captureMode is not defined)
+      var imageFile = await _imagePicker.pickImage(imageSource: captureMode);
       setState(() {
         _imageFile = imageFile;
       });
